@@ -28,9 +28,9 @@ const mainTheme: ThemeConfig = {
       itemSelectedColor: "rgb(0,0,0)",
     },
     Button: {
-      colorBgContainer: "#F8FAFC",
-      colorText: "#232323",
-      colorPrimaryHover: "#520E0D",
+      colorBgContainer: "#303060",
+      colorText: "#fff",
+      colorPrimaryHover: "#efecec",
       contentFontSize: 16,
       borderRadius: 8,
     },
@@ -63,12 +63,8 @@ const mainTheme: ThemeConfig = {
     },
     Form: {
       labelFontSize: 16,
-      labelColor: "rgb(248,250,252)",
     },
-    Tabs: {
-      colorText: "rgb(248,250,252)",
-      itemSelectedColor: "#3D2424",
-    },
+
     Select: {
       colorBorder: "rgb(0,0,0)",
       colorTextDisabled: "rgb(0,0,0)",
@@ -97,9 +93,6 @@ const mainTheme: ThemeConfig = {
     Checkbox: {
       colorText: "#33b1fc",
       colorPrimary: "#33b1fc",
-    },
-    Upload: {
-      colorText: "#fff",
     },
   },
 };

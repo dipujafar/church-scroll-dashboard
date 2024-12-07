@@ -5,18 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineBarChart } from "react-icons/ai";
 import { CiBadgeDollar, CiLogout } from "react-icons/ci";
-import { GoChecklist } from "react-icons/go";
-import { LuClipboardList } from "react-icons/lu";
 import { PiUsersThreeThin } from "react-icons/pi";
 import { TbSettingsCheck } from "react-icons/tb";
-import { HiOutlineCircleStack } from "react-icons/hi2";
 import { SlBookOpen } from "react-icons/sl";
 import logoImage from "@/assets//image/logo.png";
 import { useEffect, useState } from "react";
 import MenuItem from "antd/es/menu/MenuItem";
-import { MdOutlineAddchart } from "react-icons/md";
 import { MdOutlinePolicy } from "react-icons/md";
-import { Component, NotepadText } from "lucide-react";
+import { Podcast } from "lucide-react";
 type MenuItem = Required<MenuProps>["items"][number];
 
 type TSidebarType = {
@@ -42,14 +38,9 @@ const adminNavLink: MenuItem[] = [
     label: <Link href="/earnings">Earnings</Link>,
   },
   {
-    key: "coupon-details",
-    icon: <Component size={24} />,
-    label: <Link href="/coupon">Coupon Details</Link>,
-  },
-  {
-    key: "add-banner",
-    icon: <MdOutlineAddchart size={24} />,
-    label: <Link href="/add-banner">Add Banner</Link>,
+    key: "manage-subscription",
+    icon: <Podcast strokeWidth={1} size={24} />,
+    label: <Link href="/manage-subscription">Manage Subscription</Link>,
   },
 
   {
@@ -57,11 +48,6 @@ const adminNavLink: MenuItem[] = [
     icon: <TbSettingsCheck size={24} />,
     label: "Settings",
     children: [
-      {
-        key: "aboutUs",
-        icon: <HiOutlineCircleStack size={24} />,
-        label: <Link href="/aboutUs">About Us</Link>,
-      },
       {
         key: "privacyPolicy",
         icon: <MdOutlinePolicy size={24} />,

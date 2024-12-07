@@ -1,7 +1,9 @@
 "use client";
 import { Divider, Pagination } from "antd";
+
 import { useState } from "react";
-import { MdOutlineNotificationsNone } from "react-icons/md";
+import notificationIcon from "@/assets/Icons/Notification.png";
+import Image from "next/image";
 
 const notificationData = [
   {
@@ -42,15 +44,14 @@ const NotificationsContainer = () => {
   const currentnotifications = notificationData.slice(startIndex, endIndex);
   return (
     <div>
-      <div className="min-h-[80vh] bg-primary-green text-[#F8FAFC] rounded-md p-7">
+      <div className="min-h-[80vh] bg-transparent rounded-md p-7">
         <h1 className="text-2xl text-mainColor font-medium">Notifications</h1>
         <Divider></Divider>
         <div className="mt-9 grid grid-cols-1 gap-8">
           {currentnotifications.map((notification, inx) => (
             <div key={inx} className="flex gap-4 items-center">
-              <div className="bg-[#FFFFFF] p-3 rounded">
-                <MdOutlineNotificationsNone size={24} color="#000" />
-              </div>
+              <Image src={notificationIcon} alt="notification"></Image>
+
               <div>
                 <h4 className="text-lg font-medium">
                   {notification.message} from {notification?.name}

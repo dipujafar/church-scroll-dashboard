@@ -11,7 +11,7 @@ const ProfileContainer = () => {
     <div className="py-8 rounded font-urbanist">
       <div className=" flex items-center justify-center h-[200px]">
         <div className="flex items-center gap-x-5">
-          <div className="max-h-[112px]">
+          <div className="max-w-[112px] max-h-[112px] z-10">
             <Image
               src={"/user3.jpg"}
               alt="user image"
@@ -22,8 +22,8 @@ const ProfileContainer = () => {
             <Upload
               listType="picture"
               maxCount={1}
-              className="!w-[50px]"
-              style={{ width: "50px", overflow: "hidden" }}
+              className="!w-[100px]"
+              style={{ width: "100px", overflow: "hidden" }}
             >
               <div className="bg-white text-black text-lg p-1 rounded-full flex items-center justify-center -translate-y-8 translate-x-20 ">
                 <Camera size={16} />

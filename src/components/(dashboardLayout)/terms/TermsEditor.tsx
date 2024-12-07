@@ -27,7 +27,7 @@ const TermsEditor = () => {
   };
 
   return (
-    <>
+    <div className="border p-2 rounded-lg border-black/50">
       <ReactQuill
         modules={moduleConest}
         theme="snow"
@@ -40,7 +40,7 @@ const TermsEditor = () => {
         block
         style={{
           marginTop: "20px",
-          backgroundColor: "transparent",
+          backgroundColor: "#303060",
           color: "#fff",
           border: "1px solid #fff",
           borderRadius: "20px",
@@ -49,7 +49,7 @@ const TermsEditor = () => {
       >
         Save Changes
       </Button>
-    </>
+    </div>
   );
 };
 
