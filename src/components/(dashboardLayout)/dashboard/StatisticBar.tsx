@@ -1,28 +1,61 @@
 import Image from "next/image";
-import userIcon from "@/assets/Icons/usersIcon.png";
-import earingIcon from "@/assets/Icons/EarningIcon.png";
+import userIcon from "@/assets/Icons/user.png";
+import churchIcon from "@/assets/Icons/churchUser.png";
+import memberIcon from "@/assets/Icons/totalUser.png";
+import earingIcon from "@/assets/Icons/dollar.png";
 
 const StatisticBar = () => {
   return (
-    <div className="lg:h-32 flex flex-col lg:flex-row gap-y-2  font-roboto text-primary-white">
-      <div className="lg:w-1/2 h-full lg:mr-4 bg-primary-green rounded-xl flex gap-x-6 px-12 items-center ">
-        <div className="bg-primary-black p-4 rounded-full">
+    <div className="flex flex-wrap  flex-col lg:flex-row gap-y-2 gap-x-2 justify-between  font-roboto text-black">
+      {/* total user */}
+      <div className=" flex-1 py-5   rounded-xl flex 2xl:gap-x-6 gap-x-2 px-4 2xl:px-8 items-center border">
+        <div className="bg-[#303060] p-4 rounded-2xl">
           <Image src={userIcon} alt="user" width={40} height={40} />
         </div>
         <div className="flex flex-col ">
-          <p className="xl:text-3xl text-xl ">Total User</p>
-          <h4 className="xl:text-3xl text-xl font-bold">518</h4>
+          <p className="truncate text-xl">Total User</p>
+          <h4 className="xl:text-4xl text-2xl font-medium text-[#303060]">
+            518
+          </h4>
         </div>
       </div>
-      <div className="lg:w-1/2 h-full lg:ml-4 bg-primary-green rounded-xl flex gap-6  px-12 items-center  ">
-        <div className="bg-primary-black p-4 rounded-full">
+      {/* total church */}
+      <div className="flex-1 py-5   rounded-xl flex 2xl:gap-x-6 gap-x-2 px-4 2xl:px-8 items-center border">
+        <div className="bg-[#303060] p-4 rounded-2xl">
+          <Image src={churchIcon} alt="user" width={40} height={40} />
+        </div>
+        <div className="flex flex-col ">
+          <p className="truncate text-xl ">Total Churches</p>
+          <h4 className="xl:text-4xl text-2xl font-medium text-[#303060]">
+            118
+          </h4>
+        </div>
+      </div>
+      {/* total members */}
+      <div className="flex-1 py-5   rounded-xl flex 2xl:gap-x-6 gap-x-2 px-4 2xl:px-8 items-center border">
+        <div className="bg-[#303060] p-4 rounded-2xl">
+          <Image src={memberIcon} alt="user" width={40} height={40} />
+        </div>
+        <div className="flex flex-col ">
+          <p className="truncate text-xl">Total Members</p>
+          <h4 className="xl:text-4xl text-2xl font-medium text-[#303060]">
+            72
+          </h4>
+        </div>
+      </div>
+      {/* total members */}
+      <div className=" flex-1 py-5   rounded-xl flex 2xl:gap-x-6 gap-x-2 px-4 2xl:px-8 items-center border">
+        <div className="bg-[#303060] p-4 rounded-2xl">
           <Image src={earingIcon} alt="user" width={40} height={40} />
         </div>
         <div className="flex flex-col ">
-          <p className="xl:text-3xl text-xl">Total Earning</p>
-          <h4 className="xl:text-3xl text-xl font-bold">$78464</h4>
+          <p className="truncate text-xl">Total Earning</p>
+          <h4 className="xl:text-4xl text-2xl font-medium text-[#303060]">
+            $1500
+          </h4>
         </div>
       </div>
+
       <div></div>
     </div>
   );

@@ -25,38 +25,17 @@ const data = [
   { name: "Dec", sell: 2105 },
 ];
 
-const ProductSellChart = () => {
+const PageViewChart = () => {
   const [selectedYear, setSelectedYear] = useState("2024");
-  const [selectedUserType, setSelectedUserType] = useState("user");
 
   const handleChange = (value: string) => {
     setSelectedYear(value);
   };
-  const handleUserChange = (value: string) => {
-    setSelectedUserType(value);
-  };
 
   return (
-    <div className="bg-primary-green  rounded-lg p-8 w-full xl:w-1/2">
+    <div className="rounded-lg p-8 w-full xl:w-1/2">
       <div className="text-parimaryWhite flex lg:flex-wrap xl:flex-nowrap justify-between items-center mb-10 gap-2">
-        <h1 className="text-xl">User Overview</h1>
-        <h1 className="">
-          Account Type:
-          <Select
-            value={selectedUserType}
-            style={{
-              width: 120,
-              marginLeft: "5px",
-            }}
-            onChange={handleUserChange}
-            options={[
-              { value: "user", label: "User" },
-              { value: "vendor", label: "Vendor" },
-              { value: "rider", label: "Rider" },
-              { value: "broker", label: "Broker" },
-            ]}
-          />
-        </h1>
+        <h1 className="text-xl text-black/70">Page View</h1>
 
         <Select
           value={selectedYear}
@@ -77,8 +56,8 @@ const ProductSellChart = () => {
         >
           <defs>
             <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="30%" stopColor="#080E0E" stopOpacity={1} />
-              <stop offset="100%" stopColor="#22804C" stopOpacity={0.4} />
+              <stop offset="50%" stopColor="#a0d4f3" stopOpacity={1} />
+              <stop offset="100%" stopColor="#ddeffa" stopOpacity={0.4} />
             </linearGradient>
           </defs>
           <XAxis
@@ -93,8 +72,8 @@ const ProductSellChart = () => {
             activeDot={false}
             type="monotone"
             dataKey="sell"
-            strokeWidth={0}
-            stroke="#080E0E"
+            strokeWidth={1}
+            stroke="#1e7aec"
             fill="url(#color)"
           />
         </AreaChart>
@@ -103,4 +82,4 @@ const ProductSellChart = () => {
   );
 };
 
-export default ProductSellChart;
+export default PageViewChart;

@@ -59,10 +59,6 @@ body {
 
 /* ----------------------- */
 
-.recharts-cartesian-axis-tick > text {
-  fill: #fff;
-}
-
 /* pagination related styles */
 .ant-pagination-item {
   background-color: #8a8a8a !important;

@@ -27,7 +27,9 @@ const data = [
 ];
 
 const EaringOverviewChart = () => {
-  const [selectedYear, setSelectedYear] = useState("2024");
+  const [selectedYear, setSelectedYear] = useState<string>(
+    new Date().getFullYear().toString()
+  );
 
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);
@@ -35,9 +37,9 @@ const EaringOverviewChart = () => {
   };
 
   return (
-    <div className="bg-primary-green  rounded-lg p-8 xl:w-1/2">
-      <div className="text-parimaryWhite flex justify-between items-center mb-10">
-        <h1 className="text-xl">Earning Overview</h1>
+    <div className="  rounded-lg p-8 xl:w-1/2">
+      <div className=" flex justify-between items-center mb-10">
+        <h1 className="text-xl text-black/70">Earning Overview</h1>
         <h1 className="">
           Monthly Growth: <span className="ml-2 font-medium">35.80%</span>
         </h1>
@@ -51,6 +53,7 @@ const EaringOverviewChart = () => {
             { value: "2025", label: "2025" },
             { value: "2026", label: "2026" },
             { value: "2027", label: "2027" },
+            { value: "2028", label: "2028" },
           ]}
         />
       </div>
@@ -83,12 +86,12 @@ const EaringOverviewChart = () => {
             strokeDasharray="0"
           />
           <Bar
-            barSize={12}
-            radius={10}
+            // barSize={12}
+            radius={[2, 2, 0, 0]}
             background={false}
             dataKey="revenue"
-            fill="#1D242D"
-            stroke="#080E0E"
+            fill="#2ea1e5"
+            stroke="#2ea1e5"
           />
         </BarChart>
       </ResponsiveContainer>
