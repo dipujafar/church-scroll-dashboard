@@ -3,9 +3,7 @@ import PrivacyPolicyEditor from "@/components/(dashboardLayout)/privacy-policy/P
 const AboutPage = () => {
   return (
     <div>
-      <h1 className="text-2xl font-bold w-full text-primary-white">
-        Privacy Policy
-      </h1>
+      <h1 className="text-2xl font-bold w-full mb-2">Privacy Policy</h1>
       <PrivacyPolicyEditor></PrivacyPolicyEditor>
     </div>
   );

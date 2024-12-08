@@ -30,11 +30,11 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarType) => {
           }
           onClick={() => setCollapsed(!collapsed)}
         />
-        <h1 className="capitalize text-2xl font-medium ">
+        {/* <h1 className="capitalize text-2xl font-medium ">
           {navbarTitle.length > 1
             ? navbarTitle.replaceAll("/", " ").replaceAll("-", " ")
             : "dashboard"}
-        </h1>
+        </h1> */}
       </div>
       <div className="flex items-center gap-x-6">
         <Link href={"/notifications"}>
