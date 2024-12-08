@@ -21,48 +21,38 @@ const VerifyEmailForm = () => {
   };
 
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Form: {
-            labelColor: "rgb(248,250,252)",
-          },
-        },
-      }}
+    <Form
+      name="basic"
+      initialValues={{ remember: true }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+      autoComplete="off"
+      layout="vertical"
+      className="md:w-[481px]"
     >
-      <Form
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-        layout="vertical"
-        className="md:w-[481px]"
+      <Form.Item<FieldType>
+        label="OTP"
+        name="otp"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        rules={[{ required: true, message: "Please input OPT" }]}
       >
-        <Form.Item<FieldType>
-          label="OTP"
-          name="otp"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          rules={[{ required: true, message: "Please input OPT" }]}
-        >
-          <Input.OTP size="large" length={4} />
-        </Form.Item>
+        <Input.OTP size="large" length={6} />
+      </Form.Item>
 
-        <Form.Item style={{ display: "flex", justifyContent: "center" }}>
-          <Button
-            htmlType="submit"
-            size="large"
-            style={{ backgroundColor: "#232323", color: "#F8FAFC" }}
-          >
-            Verify
-          </Button>
-        </Form.Item>
-      </Form>
-    </ConfigProvider>
+      <Form.Item style={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          htmlType="submit"
+          size="large"
+          style={{ backgroundColor: "#303060", color: "#F8FAFC" }}
+        >
+          Verify
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 

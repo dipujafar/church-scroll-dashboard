@@ -24,49 +24,39 @@ const ForgetPasswordForm = () => {
   };
 
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Form: {
-            labelColor: "rgb(248,250,252)",
-          },
-        },
-      }}
+    <Form
+      name="basic"
+      initialValues={{ remember: true }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+      autoComplete="off"
+      layout="vertical"
+      className="md:w-[481px]"
     >
-      <Form
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-        layout="vertical"
-        className="md:w-[481px]"
+      <Form.Item<FieldType>
+        label="Email"
+        name="email"
+        rules={[
+          { required: true, message: "Please input your email!" },
+          {
+            type: "email",
+            message: "Please enter a valid email address!",
+          },
+        ]}
       >
-        <Form.Item<FieldType>
-          label="Email"
-          name="email"
-          rules={[
-            { required: true, message: "Please input your email!" },
-            {
-              type: "email",
-              message: "Please enter a valid email address!",
-            },
-          ]}
-        >
-          <Input size="large" placeholder="Example@gamil.com" />
-        </Form.Item>
+        <Input size="large" type="email" placeholder="Example@gamil.com" />
+      </Form.Item>
 
-        <Form.Item style={{ display: "flex", justifyContent: "center" }}>
-          <Button
-            htmlType="submit"
-            size="large"
-            style={{ backgroundColor: "#232323", color: "#F8FAFC" }}
-          >
-            Send Code
-          </Button>
-        </Form.Item>
-      </Form>
-    </ConfigProvider>
+      <Form.Item style={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          htmlType="submit"
+          size="large"
+          style={{ backgroundColor: "#303060", color: "#F8FAFC" }}
+        >
+          Send Code
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 

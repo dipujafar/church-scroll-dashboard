@@ -18,7 +18,7 @@ const UserModal = ({ open, setOpen }: TPropsType) => {
   };
   return (
     <Modal centered footer={null} open={open} onCancel={() => setOpen(false)}>
-      <div className=" bg-primary-green rounded-md py-6 mt-8">
+      <div className="  rounded-md py-6 mt-8">
         <div className="flex justify-center items-center">
           <div className="relative w-[140px] h-[140px] ">
             <Image
@@ -30,53 +30,43 @@ const UserModal = ({ open, setOpen }: TPropsType) => {
             />
           </div>
         </div>
-        <h2 className=" text-3xl text-center text-white mt-3 font-bold">
-          Akash Sharif
+        <h2 className=" text-2xl text-center  mt-3 font-bold">
+          Nur Mohammad Opu
         </h2>
       </div>
-      <div className=" grid grid-cols-2 justify-center px-16 gap-8 py-6">
+      <div className=" space-y-3 px-6">
         <div>
-          <p className=" text-lg font-bold">Name</p>
-          <p className=" text-lg mt-[-4px]">Akash Sharif</p>
+          <p className=" text-lg font-semibold mb-1">Email</p>
+          <p className=" text-lg mt-[-4px] bg-gray-200 py-1 rounded border-b border-black px-2">
+            info@gmail.com
+          </p>
         </div>
         <div>
-          <p className=" text-lg font-bold">Email</p>
-          <p className=" text-lg mt-[-4px]">info@gmail.com</p>
+          <p className=" text-lg font-semibold mb-1">Contact</p>
+          <p className=" text-lg mt-[-4px] bg-gray-200 py-1 rounded border-b border-black px-2">
+            08012345678
+          </p>
         </div>
         <div>
-          <p className=" text-lg font-bold">User Type</p>
-          <p className=" text-lg mt-[-4px]">Broker</p>
+          <p className=" text-lg font-semibold mb-1">User Type</p>
+          <p className=" text-lg mt-[-4px] bg-gray-200 py-1 rounded border-b border-black px-2">
+            User
+          </p>
+        </div>
+        {/* this data will be shown base on  user type */}
+        <div>
+          <p className=" text-lg font-semibold mb-1">Church Name</p>
+          <p className=" text-lg mt-[-4px] bg-gray-200 py-1 rounded border-b border-black px-2">
+            Hope Community Church
+          </p>
         </div>
         <div>
-          <p className=" text-lg font-bold">Location</p>
-          <p className=" text-lg mt-[-4px]"> New York</p>
-        </div>
-        <div>
-          <p className=" text-lg font-bold">Attach File</p>
-          <div className="flex gap-x-2">
-            {Array(3)
-              .fill(0)
-              .map((_, index) => (
-                <div
-                  onClick={handleDownloadFile}
-                  className="bg-gray-300 cursor-pointer p-2 rounded w-fit "
-                >
-                  <div className="bg-primary-green p-2 rounded-full">
-                    <Image src={pdfImage} alt="pdf_image"></Image>
-                  </div>
-                </div>
-              ))}
-          </div>
+          <p className=" text-lg font-semibold mb-1">Subscription</p>
+          <p className=" text-lg mt-[-4px] bg-gray-200 py-1 rounded border-b border-black px-2">
+            Monthly
+          </p>
         </div>
       </div>
-      {/* <Card title="PDF Viewer" style={{ width: "100%", height: "500px" }}>
-        <iframe
-          src="path/to/your/pdf-file.pdf" // Replace with the path to your PDF
-          width="100%"
-          height="100%"
-          style={{ border: "none" }}
-        />
-      </Card> */}
     </Modal>
   );
 };

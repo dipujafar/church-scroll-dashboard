@@ -87,7 +87,7 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
       collapsible
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(!value)}
-      className={`px-4 overflow-hidden ${!collapsed ? "min-w-[250px]" : ""}`}
+      className={`px-4 overflow-hidden ${!collapsed ? "min-w-[280px]" : ""}`}
     >
       <div>
         <div className=" flex justify-center pb-8 ">

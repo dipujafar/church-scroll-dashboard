@@ -27,51 +27,41 @@ const SetNewPassForm = () => {
   };
 
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Form: {
-            labelColor: "rgb(248,250,252)",
-          },
-        },
-      }}
+    <Form
+      name="basic"
+      initialValues={{ remember: true }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+      autoComplete="off"
+      layout="vertical"
+      className="md:w-[481px]"
     >
-      <Form
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-        layout="vertical"
-        className="md:w-[481px]"
+      <Form.Item<FieldType>
+        label="New Password"
+        name="newPass"
+        rules={[{ required: true, message: "Please input your email!" }]}
       >
-        <Form.Item<FieldType>
-          label="New Password"
-          name="newPass"
-          rules={[{ required: true, message: "Please input your email!" }]}
-        >
-          <Input.Password size="large" placeholder="*******" />
-        </Form.Item>
+        <Input.Password size="large" placeholder="*******" />
+      </Form.Item>
 
-        <Form.Item<FieldType>
-          name="confirmPass"
-          label="Confirm Password"
-          rules={[{ required: true, message: "Please input your password!" }]}
-        >
-          <Input.Password size="large" placeholder="*******" />
-        </Form.Item>
+      <Form.Item<FieldType>
+        name="confirmPass"
+        label="Confirm Password"
+        rules={[{ required: true, message: "Please input your password!" }]}
+      >
+        <Input.Password size="large" placeholder="*******" />
+      </Form.Item>
 
-        <Form.Item style={{ display: "flex", justifyContent: "center" }}>
-          <Button
-            htmlType="submit"
-            size="large"
-            style={{ backgroundColor: "#232323", color: "#F8FAFC" }}
-          >
-            Update Password
-          </Button>
-        </Form.Item>
-      </Form>
-    </ConfigProvider>
+      <Form.Item style={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          htmlType="submit"
+          size="large"
+          style={{ backgroundColor: "#303060", color: "#F8FAFC" }}
+        >
+          Update Password
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 

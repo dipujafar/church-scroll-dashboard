@@ -38,6 +38,11 @@ const EaringDetaisModal = ({ open, setOpen }: TPropsType) => {
           </div>
           <Divider></Divider>
           <div className="flex justify-between">
+            <h4>Transaction Method :</h4>
+            <p className="font-medium">Stripe</p>
+          </div>
+          <Divider></Divider>
+          <div className="flex justify-between">
             <h4>Amount :</h4>
             <p className="font-medium">$260</p>
           </div>
