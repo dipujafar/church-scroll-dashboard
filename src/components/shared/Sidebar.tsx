@@ -78,6 +78,7 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
 
   useEffect(() => {
     const activeKey = localStorage.getItem("activeNav");
+    if (!activeKey) return;
     setCurrent(activeKey as string);
   }, [current, setCurrent]);
 
