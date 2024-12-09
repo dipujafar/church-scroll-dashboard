@@ -64,7 +64,14 @@ const adminNavLink: MenuItem[] = [
   {
     key: "logout",
     icon: <CiLogout strokeWidth={0.8} size={24} />,
-    label: <Link href={"/login"}>Logout</Link>,
+    label: (
+      <Link
+        href={"/login"}
+        onClick={() => localStorage.removeItem("activeNav")}
+      >
+        Logout
+      </Link>
+    ),
   },
 ];
 
