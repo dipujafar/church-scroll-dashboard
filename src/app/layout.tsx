@@ -7,10 +7,10 @@ import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: {
-    default: "Admin Dashboard | Discount Me ",
-    template: "%s | Chez tati",
+    default: "Admin Dashboard | Church Scroll",
+    template: "%s | Church Scroll",
   },
-  description: "This is  official Admin Dashboard website of Discount Me ",
+  description: "This is  official Admin Dashboard website of Church Scroll",
 };
 
 export default function RootLayout({
