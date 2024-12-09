@@ -37,7 +37,7 @@ const StatisticBar = () => {
           />
         </div>
         <div className="flex flex-col ">
-          <p className="truncate 2xl:text-xl text-base ">Total Churches</p>
+          <p className="truncate 2xl:text-xl text-base">Total Churches</p>
           <h4 className="xl:text-4xl text-2xl font-medium text-[#303060]">
             118
           </h4>
