@@ -80,6 +80,7 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
 
   const onClick: MenuProps["onClick"] = (e) => {
     setCurrent(e.key);
+    if (e.key === "logout") return;
     localStorage.setItem("activeNav", e.key);
   };
 
